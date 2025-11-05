@@ -1,0 +1,12 @@
+#include "libft.h"
+
+void	free_chartab(char **tab)
+{
+	int i;
+
+	i = -1;
+	while (tab[++i])
+		free(tab[i]);
+	if (tab)	
+		free(tab);
+}
