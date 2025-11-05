@@ -4,8 +4,12 @@
 static void	init_scene(t_scene *scene)
 {
 	scene->img = NULL;
+	scene->object = NULL;
+	scene->light = NULL;
 	scene->num_obj = 0;
 	scene->num_light = 0;
+	scene->alight.ratio = 0.0f;
+	scene->alight.color = 0;
 	scene->resolution = 2;
 }
 	
