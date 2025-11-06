@@ -23,7 +23,7 @@
 # endif
 
 # define FPS 60
-# define SENSI 0.00002
+# define SENSI 0.002
 # define RESOLUTION 1
 
 typedef struct s_colors

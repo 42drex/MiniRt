@@ -16,12 +16,12 @@ void	*thread_movement(void	*window)
 			new_camera(win, cam->fov, new_point_backward(cam->pos, cam->norm_dir), cam->norm_dir);
 		if (get_mutex_value(&win->move.m_right, &win->move.right))
 		{
-			right = cross((t_vector){ .x = 0.0f, .y = 0.1f, .z = 0.0f, .w = 0.0f }, cam->norm_dir);
+			right = cross((t_vector){ .x = 0.0f, .y = 1.0f, .z = 0.0f, .w = 0.0f }, cam->norm_dir);
 			new_camera(win, cam->fov, new_point_forward(cam->pos, right), cam->norm_dir);
 		}
 		if (get_mutex_value(&win->move.m_left, &win->move.left))
 		{
-			right = neg_vector(cross((t_vector){ .x = 0.0f, .y = 0.1f, .z = 0.0f, .w = 0.0f }, cam->norm_dir));
+			right = neg_vector(cross((t_vector){ .x = 0.0f, .y = 1.0f, .z = 0.0f, .w = 0.0f }, cam->norm_dir));
 			new_camera(win, cam->fov, new_point_forward(cam->pos, right), cam->norm_dir);
 		}
 		usleep(32000);
